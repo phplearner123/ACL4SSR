@@ -22,7 +22,6 @@ payload:
   - DOMAIN-SUFFIX,tumbex.com
   - DOMAIN-SUFFIX,twdvd.com
   - DOMAIN-SUFFIX,unsplash.com
-  - DOMAIN-SUFFIX,buzzsprout.com
 
   # 国外域名
   - DOMAIN-SUFFIX,eu
@@ -190,10 +189,6 @@ payload:
   - DOMAIN-KEYWORD,uk-live
   - DOMAIN-SUFFIX,bbc.co
   - DOMAIN-SUFFIX,bbc.com
-
-  # Claude
-  - DOMAIN-SUFFIX,claude.ai
-  - DOMAIN-SUFFIX,anthropic.com
 
   # Developer 开发者常用国外网站、镜像和论坛
   - DOMAIN-SUFFIX,apache.org
@@ -376,7 +371,6 @@ payload:
   # Pixiv
   - DOMAIN-SUFFIX,pixiv.net
   - DOMAIN-SUFFIX,pximg.net
-  - DOMAIN-SUFFIX,fanbox.cc
 
   # Spark
   - DOMAIN-SUFFIX,amplitude.com
@@ -469,10 +463,6 @@ payload:
   - DOMAIN-SUFFIX,wikiversity.org
   - DOMAIN-SUFFIX,wikivoyage.org
   - DOMAIN-SUFFIX,wiktionary.org
-
-  # Zoom
-  - DOMAIN-SUFFIX,zoom.us
-  - DOMAIN-SUFFIX,zoomgov.com
 
   #飞流直播
   - DOMAIN-SUFFIX,neulion.com
