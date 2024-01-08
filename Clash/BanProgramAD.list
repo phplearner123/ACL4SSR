@@ -598,8 +598,8 @@ DOMAIN,pgdt.gtimg.com
 DOMAIN,pgdt.ugdtimg.com
 DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
-# DOMAIN,wxsnsdy.wxs.qq.com
-# DOMAIN,wxsnsdythumb.wxs.qq.com
+DOMAIN,wxsnsdy.wxs.qq.com
+DOMAIN,wxsnsdythumb.wxs.qq.com
 DOMAIN-SUFFIX,act.qq.com
 DOMAIN-SUFFIX,ad.qun.qq.com
 DOMAIN-SUFFIX,adsfile.qq.com

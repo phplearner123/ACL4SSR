@@ -1,8 +1,5 @@
 # 直连列表
 
-# NTP服务
-DOMAIN-SUFFIX,pool.ntp.org
-
 # MyList
 DOMAIN-SUFFIX,13th.tech
 DOMAIN-SUFFIX,423down.com
@@ -20,6 +17,7 @@ DOMAIN-SUFFIX,pdfwifi.com
 DOMAIN-SUFFIX,zhenguanyu.biz
 DOMAIN-SUFFIX,zhenguanyu.com
 DOMAIN-SUFFIX,snapdrop.net
+DOMAIN-SUFFIX,tebex.io
 
 # CN域名直连(中国|公司|网络)
 DOMAIN-SUFFIX,cn
@@ -82,6 +80,7 @@ DOMAIN-SUFFIX,aliyun.com
 DOMAIN-SUFFIX,aliyuncdn.com
 DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,aliyundrive.com
+DOMAIN-SUFFIX,aliyundrive.net
 DOMAIN-SUFFIX,amap.com
 DOMAIN-SUFFIX,autonavi.com
 DOMAIN-SUFFIX,dingtalk.com
@@ -204,20 +203,6 @@ DOMAIN-SUFFIX,epicgames.dev
 DOMAIN-SUFFIX,helpshift.com
 DOMAIN-SUFFIX,paragon.com
 DOMAIN-SUFFIX,unrealengine.com
-
-# Heytap
-DOMAIN-SUFFIX,allawnfs.com
-DOMAIN-SUFFIX,allawno.com
-DOMAIN-SUFFIX,allawntech.com
-DOMAIN-SUFFIX,coloros.com
-DOMAIN-SUFFIX,heytap.com
-DOMAIN-SUFFIX,heytapcs.com
-DOMAIN-SUFFIX,heytapdownload.com
-DOMAIN-SUFFIX,heytapimage.com
-DOMAIN-SUFFIX,heytapmobi.com
-DOMAIN-SUFFIX,oppo.com
-DOMAIN-SUFFIX,oppoer.me
-DOMAIN-SUFFIX,oppomobile.com
 
 # HuaWei
 DOMAIN-SUFFIX,dbankcdn.com
@@ -400,11 +385,6 @@ DOMAIN-SUFFIX,tenpay.com
 DOMAIN-SUFFIX,wechat.com
 DOMAIN-SUFFIX,weixin.com
 DOMAIN-SUFFIX,weiyun.com
-DOMAIN-SUFFIX,servicewechat.com
-DOMAIN-SUFFIX,wechatlegal.net
-DOMAIN-SUFFIX,wechatpay.com
-DOMAIN-SUFFIX,weixinbridge.com
-DOMAIN-SUFFIX,weixinsxy.com
 
 # Vip 唯品会
 DOMAIN-SUFFIX,appsimg.com
@@ -501,6 +481,7 @@ DOMAIN-SUFFIX,baike.com
 DOMAIN-SUFFIX,biqudu.com
 DOMAIN-SUFFIX,biquge.com
 DOMAIN-SUFFIX,bitauto.com
+DOMAIN-SUFFIX,bosszhipin.com
 DOMAIN-SUFFIX,c-ctrip.com
 DOMAIN-SUFFIX,camera360.com
 DOMAIN-SUFFIX,cdnmama.com
@@ -709,5 +690,6 @@ DOMAIN-SUFFIX,zhanqi.tv
 DOMAIN-SUFFIX,zhaopin.com
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
+DOMAIN-SUFFIX,zhipin.com
 DOMAIN-SUFFIX,zhongsou.com
 DOMAIN-SUFFIX,zhuihd.com
