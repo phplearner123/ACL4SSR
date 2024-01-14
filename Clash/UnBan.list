@@ -1,5 +1,6 @@
 # Unbreak 白名单 不应该被广告链接的网站
 
+
 # Epicgames
 DOMAIN-SUFFIX,ol.epicgames.com
 
@@ -41,3 +42,6 @@ DOMAIN,rewards.hypixel.net
 # Koodo Mobile
 DOMAIN-SUFFIX,koodomobile.com
 DOMAIN-SUFFIX,koodomobile.ca
+
+# NTP Pool
+DOMAIN-SUFFIX,pool.ntp.org
