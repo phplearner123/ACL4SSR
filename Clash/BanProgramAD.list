@@ -457,7 +457,6 @@ DOMAIN-SUFFIX,service.urchin.com
 
 # Heytap 欢太/OPPO/一加/真我
 DOMAIN-SUFFIX,api-audit.heytapmobi.com
-DOMAIN-SUFFIX,mdp-usertrace-cn.heytapmobi.com
 DOMAIN-SUFFIX,omes-sec.heytapmobi.com
 DOMAIN-SUFFIX,omes-sec-stdsrp-cn.heytapmobi.com
 
