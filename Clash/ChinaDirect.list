@@ -1,0 +1,30 @@
+# WeChat
+IP-CIDR,43.152.112.190/32,no-resolve
+IP-CIDR,43.153.248.34/32,no-resolve
+IP-CIDR,43.154.240.170/32,no-resolve
+IP-CIDR,43.155.124.49/32,no-resolve
+IP-CIDR,43.156.86.25/32,no-resolve
+IP-CIDR,43.156.86.115/32,no-resolve
+IP-CIDR,43.156.222.154/32,no-resolve
+IP-CIDR,43.156.222.165/32,no-resolve
+IP-CIDR,43.156.223.202/32,no-resolve
+IP-CIDR,43.156.255.184/32,no-resolve
+IP-CIDR,43.156.222.210/32,no-resolve
+IP-CIDR,43.156.222.216/32,no-resolve
+IP-CIDR,43.159.26.129/32,no-resolve
+IP-CIDR,43.159.27.247/32,no-resolve
+IP-CIDR,43.160.144.10/32,no-resolve
+IP-CIDR,43.160.144.13/32,no-resolve
+IP-CIDR,43.160.144.21/32,no-resolve
+IP-CIDR,43.160.144.24/32,no-resolve
+IP-CIDR,101.32.104.41/32,no-resolve
+IP-CIDR,101.32.107.5/32,no-resolve
+IP-CIDR,101.32.110.197/32,no-resolve
+IP-CIDR,101.32.118.25/32,no-resolve
+IP-CIDR,101.32.133.53/32,no-resolve
+IP-CIDR,101.32.133.209/32,no-resolve
+IP-CIDR,129.226.3.47/32,no-resolve
+
+
+# NTP Pool
+DOMAIN-SUFFIX,pool.ntp.org
