@@ -455,6 +455,10 @@ DOMAIN-SUFFIX,pagead.google.com
 DOMAIN-SUFFIX,pagead.l.google.com
 DOMAIN-SUFFIX,service.urchin.com
 
+# Heytap
+DOMAIN-SUFFIX,push-ads-cn.heytapmobi.com
+DOMAIN-SUFFIX,adsfs.heytapimage.com
+
 # JD
 DOMAIN-SUFFIX,ads.union.jd.com
 DOMAIN-SUFFIX,c-nfa.jd.com
