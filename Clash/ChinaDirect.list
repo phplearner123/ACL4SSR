@@ -41,3 +41,7 @@ IP-CIDR,129.226.107.244/32,no-resolve
 # NTP Pool
 DOMAIN-SUFFIX,pool.ntp.org
 
+
+# Futu
+DOMAIN-SUFFIX,futuhn.com
+DOMAIN-SUFFIX,futunn.com
