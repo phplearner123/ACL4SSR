@@ -43,5 +43,6 @@ DOMAIN-SUFFIX,pool.ntp.org
 
 
 # Futu
+DOMAIN-SUFFIX,futuhk.com
 DOMAIN-SUFFIX,futuhn.com
 DOMAIN-SUFFIX,futunn.com
