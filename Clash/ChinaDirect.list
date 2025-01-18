@@ -46,3 +46,20 @@ DOMAIN-SUFFIX,pool.ntp.org
 DOMAIN-SUFFIX,futuhk.com
 DOMAIN-SUFFIX,futuhn.com
 DOMAIN-SUFFIX,futunn.com
+
+
+# IBKR
+DOMAIN-SUFFIX,ibkr.ca
+DOMAIN-SUFFIX,ibkr.co.uk
+DOMAIN-SUFFIX,ibkr.com
+DOMAIN-SUFFIX,ibkr.com.cn
+DOMAIN-SUFFIX,ibtws.com
+DOMAIN-SUFFIX,interactivebrokers.ca
+DOMAIN-SUFFIX,interactivebrokers.hu
+DOMAIN-SUFFIX,interactivebrokers.ie
+DOMAIN-SUFFIX,interactivebrokers.co.in
+DOMAIN-SUFFIX,interactivebrokers.co.jp
+DOMAIN-SUFFIX,interactivebrokers.co.uk
+DOMAIN-SUFFIX,interactivebrokers.com.au
+DOMAIN-SUFFIX,interactivebrokers.com.hk
+DOMAIN-SUFFIX,interactivebrokers.com.sg
