@@ -70,3 +70,7 @@ DOMAIN-SUFFIX,interactivebrokers.co.uk
 DOMAIN-SUFFIX,interactivebrokers.com.au
 DOMAIN-SUFFIX,interactivebrokers.com.hk
 DOMAIN-SUFFIX,interactivebrokers.com.sg
+
+# Games
+DOMAIN-SUFFIX,gree-apps.net
+DOMAIN-SUFFIX,wfs.games
