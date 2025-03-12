@@ -46,6 +46,7 @@ DOMAIN-SUFFIX,pool.ntp.org
 DOMAIN-SUFFIX,futuhk.com
 DOMAIN-SUFFIX,futuhn.com
 DOMAIN-SUFFIX,futunn.com
+IP-CIDR,101.32.198.103/32,no-resolve
 
 
 # Long Bridge
