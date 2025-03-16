@@ -110,3 +110,7 @@ IP-CIDR,63.251.124.0/24
 # Adguard
 DOMAIN,local.adguard.org
 DOMAIN,injections.adguard.org
+
+
+# IP-CN
+DOMAIN-SUFFIX,ip138.com
