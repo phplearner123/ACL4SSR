@@ -46,7 +46,18 @@ DOMAIN-SUFFIX,pool.ntp.org
 DOMAIN-SUFFIX,futuhk.com
 DOMAIN-SUFFIX,futuhn.com
 DOMAIN-SUFFIX,futunn.com
+IP-CIDR,43.132.106.6/32,no-resolve
+IP-CIDR,43.132.107.102/32,no-resolve
+IP-CIDR,43.135.64.109/32,no-resolve
+IP-CIDR,43.153.233.58/32,no-resolve
+IP-CIDR,43.153.233.166/32,no-resolve
+IP-CIDR,43.153.233.181/32,no-resolve
 IP-CIDR,101.32.198.103/32,no-resolve
+IP-CIDR,124.156.124.214/32,no-resolve
+IP-CIDR,124.156.124.226/32,no-resolve
+IP-CIDR,124.156.233.21/32,no-resolve
+IP-CIDR,124.156.234.231/32,no-resolve
+IP-CIDR,170.106.48.217/32,no-resolve
 
 
 # Long Bridge
@@ -72,11 +83,13 @@ DOMAIN-SUFFIX,interactivebrokers.com.au
 DOMAIN-SUFFIX,interactivebrokers.com.hk
 DOMAIN-SUFFIX,interactivebrokers.com.sg
 
+
 # Games
 DOMAIN-SUFFIX,gree-apps.net
 DOMAIN,heaven-burns-red-assets-ap.akamaized.net
 DOMAIN,heaven-burns-red-assets.akamaized.net
 DOMAIN-SUFFIX,wfs.games
+
 
 # Talkatone
 DOMAIN-SUFFIX,mobilefuse.com
@@ -92,6 +105,7 @@ IP-CIDR,50.117.27.0/24
 IP-CIDR,69.46.75.0/24
 IP-CIDR,205.164.56.0/24
 IP-CIDR,63.251.124.0/24
+
 
 # Adguard
 DOMAIN,local.adguard.org
