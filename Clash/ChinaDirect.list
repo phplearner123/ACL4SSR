@@ -94,4 +94,5 @@ IP-CIDR,205.164.56.0/24
 IP-CIDR,63.251.124.0/24
 
 # Adguard
+DOMAIN,local.adguard.org
 DOMAIN,injections.adguard.org
