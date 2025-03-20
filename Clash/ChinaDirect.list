@@ -98,3 +98,9 @@ DOMAIN,injections.adguard.org
 
 # IP-CN
 DOMAIN-SUFFIX,ip138.com
+
+
+# Syncthing
+DOMAIN,discovery-announce-v4.syncthing.net
+DOMAIN,discovery-lookup.syncthing.net
+DOMAIN,discovery-announce-v6.syncthing.net
