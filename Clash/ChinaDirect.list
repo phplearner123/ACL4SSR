@@ -49,6 +49,7 @@ DOMAIN-SUFFIX,futunn.com
 IP-CIDR,43.132.106.6/32,no-resolve
 IP-CIDR,43.132.107.102/32,no-resolve
 IP-CIDR,43.135.64.109/32,no-resolve
+IP-CIDR,43.135.82.18/32,no-resolve
 IP-CIDR,43.153.233.58/32,no-resolve
 IP-CIDR,43.153.233.166/32,no-resolve
 IP-CIDR,43.153.233.181/32,no-resolve
