@@ -107,5 +107,5 @@ DOMAIN,discovery-lookup.syncthing.net
 DOMAIN,discovery-announce-v6.syncthing.net
 
 
-# Microsoft Signalr Service
+# Microsoft SignalR Service
 DOMAIN-SUFFIX,service.signalr.net
