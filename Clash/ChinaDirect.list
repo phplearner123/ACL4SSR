@@ -109,3 +109,25 @@ DOMAIN,discovery-announce-v6.syncthing.net
 
 # Microsoft SignalR Service
 DOMAIN-SUFFIX,service.signalr.net
+
+
+# HK Bank
+DOMAIN-SUFFIX,hsbc.com.hk
+DOMAIN-SUFFIX,bochk.com
+DOMAIN-SUFFIX,airstarbank.com
+DOMAIN-SUFFIX,za.group
+DOMAIN-SUFFIX,zaticdn.com
+DOMAIN-SUFFIX,zafinsvc.com
+DOMAIN-SUFFIX,zajourney.com
+DOMAIN-SUFFIX,livibank.com
+
+
+# UK or EU Bank
+DOMAIN-SUFFIX,myfin.bg
+DOMAIN-SUFFIX,meawallet.com
+DOMAIN-SUFFIX,ifastgb.com
+DOMAIN-SUFFIX,fundsupermart.com
+
+
+# Wise
+DOMAIN-SUFFIX,wise.com
