@@ -1103,6 +1103,16 @@ DOMAIN-SUFFIX,zaticdn.com
 DOMAIN-SUFFIX,zafinsvc.com
 DOMAIN-SUFFIX,zajourney.com
 DOMAIN-SUFFIX,livibank.com
+DOMAIN-SUFFIX,antbank.hk
+DOMAIN-SUFFIX,ccb.com
+DOMAIN-SUFFIX,ncb.com.hk
+DOMAIN-SUFFIX,cncbinternational.com
+
+
+# HK e-wallets
+DOMAIN-SUFFIX,alipay.hk
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypalobjects.com
 
 
 # UK or EU Bank
