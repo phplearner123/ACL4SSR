@@ -5,51 +5,97 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
+# 允许 GITHUB_TOKEN 推送仓库内容
+permissions:
+  contents: write
+
+# 避免定时任务与手动任务同时同步
+concurrency:
+  group: upstream-sync-master
+  cancel-in-progress: false
+
 jobs:
   sync_latest_from_upstream:
     runs-on: ubuntu-latest
-    name: Safe Sync latest commits from upstream repo
+    name: Safe sync latest commits from upstream repo
 
     steps:
-    - name: Checkout your repo
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 0
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout your repo
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Safe Sync From Upstream
-      id: sync
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        
-        git remote add upstream "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@://github.com"
-        git fetch upstream master
-        
-        LOCAL_SHA=$(git rev-parse HEAD)
-        UPSTREAM_SHA=$(git rev-parse upstream/master)
-        
-        if [ "$LOCAL_SHA" = "$UPSTREAM_SHA" ]; then
-          echo "has_new_commits=false" >> "$GITHUB_OUTPUT"
-          echo "No new commits from upstream."
-          exit 0
-        fi
-        
-        echo "has_new_commits=true" >> "$GITHUB_OUTPUT"
-        
-        git merge upstream/master --no-commit --no-ff || true
-        
-        if [ -d ".github/workflows" ]; then
-          git checkout HEAD -- .github/*
-        fi
-        
-        git commit -m "🤖 Safe sync: Upstream merged." || true
-        git push origin master
+      - name: Safe sync from upstream
+        id: sync
+        shell: bash
+        run: |
+          set -euo pipefail
 
-    - name: Check for latest commits
-      if: steps.sync.outputs.has_new_commits == 'true'
-      run: echo "New commits were found and synced safely!"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-    - name: No new commits
-      if: steps.sync.outputs.has_new_commits == 'false'
-      run: echo "There were no new commits."
+          # 上游是公开仓库，不需要在地址中放 Token
+          git remote add upstream https://github.com/ACL4SSR/ACL4SSR.git
+          git fetch --no-tags upstream \
+            refs/heads/master:refs/remotes/upstream/master
+
+          # 上游提交已经包含在当前分支中，无须再次合并。
+          # 不能只比较 SHA：本地存在额外提交时，SHA 不同也可能已经同步。
+          if git merge-base --is-ancestor upstream/master HEAD; then
+            echo "has_new_commits=false" >> "$GITHUB_OUTPUT"
+            echo "No new commits from upstream."
+            exit 0
+          fi
+
+          # 保存同步前的提交，作为 .github 目录的恢复来源
+          LOCAL_SHA=$(git rev-parse HEAD)
+
+          # 合并但不立即提交，留出恢复 .github 的机会
+          merge_status=0
+          git merge --no-commit --no-ff upstream/master || merge_status=$?
+
+          # 冲突导致的失败可以继续处理；其他合并错误直接停止
+          if [ "$merge_status" -ne 0 ] &&
+             ! git rev-parse --verify -q MERGE_HEAD >/dev/null; then
+            echo "::error::Could not start the upstream merge."
+            exit "$merge_status"
+          fi
+
+          # 完整保留本地 .github，包括恢复删除、移除上游新增文件，
+          # 以及解决该目录内的合并冲突
+          if git cat-file -e "${LOCAL_SHA}:.github" 2>/dev/null; then
+            git restore \
+              --source="$LOCAL_SHA" \
+              --staged \
+              --worktree \
+              -- .github
+          else
+            # 本地原本没有 .github，则不引入上游的 .github
+            git rm -r -f --ignore-unmatch -- .github
+          fi
+
+          # .github 之外仍有冲突时停止，不自动选择任何一方
+          if [ -n "$(git ls-files --unmerged)" ]; then
+            echo "::error::Merge conflicts exist outside .github. Manual resolution is required."
+            git diff --name-only --diff-filter=U
+            git merge --abort
+            exit 1
+          fi
+
+          # 即使文件内容没有变化，也保留合并提交，记录上游已同步
+          git commit -m "chore: sync upstream while preserving local .github"
+
+          # 不使用强制推送，避免覆盖远端的新提交
+          git push origin HEAD:refs/heads/master
+
+          echo "has_new_commits=true" >> "$GITHUB_OUTPUT"
+
+      - name: Check for latest commits
+        if: steps.sync.outputs.has_new_commits == 'true'
+        run: echo "New commits were found and synced safely!"
+
+      - name: No new commits
+        if: steps.sync.outputs.has_new_commits == 'false'
+        run: echo "There were no new commits."
