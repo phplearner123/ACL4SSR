@@ -8,23 +8,47 @@ on:
 jobs:
   sync_latest_from_upstream:
     runs-on: ubuntu-latest
-    name: Sync latest commits from upstream repo
+    name: Safe Sync latest commits from upstream repo
 
     steps:
-    # 第一步：使用 Upstream Sync 插件
-    - name: Sync upstream changes
-      id: sync
-      uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.3
+    - name: Checkout your repo
+      uses: actions/checkout@v4
       with:
-        target_sync_branch: master
-        target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-        upstream_sync_branch: master
-        upstream_sync_repo: ACL4SSR/ACL4SSR
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
 
-    # 第二步：检查同步状态
+    - name: Safe Sync From Upstream
+      id: sync
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@://github.com"
+        
+        git remote add upstream https://github.com
+        git fetch upstream master
+        
+        LOCAL_SHA=$(git rev-parse HEAD)
+        UPSTREAM_SHA=$(git rev-parse upstream/master)
+        
+        if [ "$LOCAL_SHA" = "$UPSTREAM_SHA" ]; then
+          echo "has_new_commits=false" >> "$GITHUB_OUTPUT"
+          echo "No new commits from upstream."
+          exit 0
+        fi
+        
+        echo "has_new_commits=true" >> "$GITHUB_OUTPUT"
+        
+        git merge upstream/master --no-commit --no-ff || true
+        
+        if [ -d ".github/workflows" ]; then
+          git checkout HEAD -- .github/*
+        fi
+        
+        git commit -m "🤖 Safe sync: Upstream merged." || true
+        git push origin master
+
     - name: Check for latest commits
       if: steps.sync.outputs.has_new_commits == 'true'
-      run: echo "New commits were found and synced!"
+      run: echo "New commits were found and synced safely!"
 
     - name: No new commits
       if: steps.sync.outputs.has_new_commits == 'false'
